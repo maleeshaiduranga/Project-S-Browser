@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>S Browser</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-frame">
+        <div class="brand-wrap">
+          <div class="brand-icon">S</div>
+          <div>
+            <h1>S Browser</h1>
+            <p>Windows 11 Edition</p>
+          </div>
+        </div>
+        <div class="actions">
+          <button id="extensionsBtn" class="ghost">Extensions</button>
+          <button id="menuBtn" class="ghost">☰</button>
+        </div>
+      </header>
+
+      <div class="address-bar">
+        <button id="backBtn" title="Back">←</button>
+        <button id="forwardBtn" title="Forward">→</button>
+        <button id="refreshBtn" title="Refresh">↻</button>
+        <input id="addressInput" type="text" placeholder="Search or type URL" autocomplete="off" />
+        <button id="goBtn">Go</button>
+      </div>
+    </div>
+
+    <dialog id="extensionsDialog">
+      <h2>Chrome Extensions</h2>
+      <p>
+        S Browser supports unpacked Chrome extensions. Copy extension folders to:
+        <code id="extensionPath"></code>
+      </p>
+      <div id="extensionList"></div>
+      <button id="closeExtensions">Close</button>
+    </dialog>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

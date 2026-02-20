@@ -1,0 +1,23 @@
+appId: com.sbrowser.desktop
+productName: S Browser
+directories:
+  output: dist
+files:
+  - src/**/*
+  - package.json
+  - README.md
+  - docs/**/*
+extraMetadata:
+  main: src/main.js
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: S Browser
+artifactName: S-Browser-Setup-${version}.${ext}

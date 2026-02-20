@@ -1,0 +1,128 @@
+:root {
+  color-scheme: dark;
+  --bg: #0a1020;
+  --panel: rgba(15, 23, 42, 0.88);
+  --line: rgba(148, 163, 184, 0.25);
+  --accent: #5b8cff;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 10% -10%, rgba(91, 140, 255, 0.35), transparent 55%),
+    radial-gradient(circle at 85% -30%, rgba(96, 165, 250, 0.24), transparent 60%),
+    var(--bg);
+  color: var(--text);
+}
+
+.app-shell {
+  height: 116px;
+  backdrop-filter: blur(30px);
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+  padding: 10px 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.top-frame {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(140deg, #5b8cff, #68c7ff);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+.brand-wrap h1 {
+  margin: 0;
+  line-height: 1;
+  font-size: 14px;
+}
+
+.brand-wrap p {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.ghost,
+.address-bar button,
+#closeExtensions {
+  border: 1px solid var(--line);
+  color: var(--text);
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 11px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.address-bar {
+  display: grid;
+  grid-template-columns: 42px 42px 42px 1fr 60px;
+  gap: 8px;
+}
+
+#addressInput {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  background: rgba(15, 23, 42, 0.95);
+  color: var(--text);
+  font-size: 14px;
+}
+
+#goBtn {
+  background: linear-gradient(130deg, var(--accent), #7c8dff);
+  border: none;
+}
+
+dialog {
+  width: min(640px, 92vw);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(10, 16, 32, 0.98);
+  color: var(--text);
+  padding: 20px;
+}
+
+code {
+  padding: 2px 6px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.extension-item {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}
